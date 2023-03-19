@@ -90,9 +90,11 @@ class Persona:
          self.__nombre= nombre
     
     def set_dni(self, dni):
+        if len(dni) == 8:
          self.__dni= dni
     
     def set_nombre(self, edad):
+        if edad >= 0:
          self.__edad= edad
          
 
@@ -135,6 +137,9 @@ class Cuenta:
     def mostrar (self):
         print("Nombre", self.titular)
         print("cantidad", self.__Cantidad)
+
+#cuenta_pepe = Cuenta(Persona("Pepe", 30),0)
+
      
 """8. Vamos a definir ahora una “Cuenta Joven”, para ello vamos a crear una nueva clase 
 CuantaJoven que deriva de la clase creada en el punto 7. Cuando se crea esta nueva clase, 
